@@ -1,0 +1,16 @@
+
+<div nz-popover [nzContent]="contentTemplate" class="tag-wrapper">
+  <ng-content></ng-content>
+  <i nz-icon type="close" (click)="closeTag($event)"></i>
+</div>
+<ng-template #contentTemplate>
+  <ng-container>
+    <div *ngFor="let column of configs.columns">
+        <span>{{column.label}}: {{data[column.name]}}</span>
+        
+    </div>
+    
+  </ng-container>
+  
+</ng-template>
+

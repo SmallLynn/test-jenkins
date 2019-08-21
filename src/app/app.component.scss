@@ -1,0 +1,259 @@
+body {
+    height: 100%;
+}
+
+.box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.box1,
+.box2,
+.box3 {
+    border: 1px solid black;
+    flex: 1
+}
+
+.item,
+.item2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.col-1,
+.icons {
+    display: flex;
+    justify-content: center;
+    width: 100px;
+}
+
+.col-1 {
+    width: 50px;
+}
+
+.icons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.text {
+    flex: 1 auto;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    // align-items: center;
+    // min-height:30px;
+}
+
+.container {
+    position: relative;
+    flex: 1 0 auto;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    // left: 0;
+    // width: 100%;
+    // overflow: hidden;
+}
+
+.main {
+    // position: absolute;
+    // overflow: hidden;
+}
+
+.main-inner {
+    // display: flex;
+    // flex-wrap: nowrap;
+    position: absolute;
+    left: 0;
+    // overflow: scroll;
+    white-space: nowrap;
+    // width: auto;
+}
+
+.main-inner>div {
+    // float: left;
+    // flex: 1 0 auto;
+    display: inline-block;
+    background-color: green;
+    color: #fff;
+    margin: 0 5px;
+    padding: 0 5px;
+    line-height: 25px;
+}
+
+.prev,
+.next {
+    line-height: 25px;
+}
+
+.box3 {
+    display: flex;
+    justify-content: center;
+}
+
+
+.box3-container {
+    position: relative;
+    display: flex;
+    flex: 1;
+    align-self: center;
+    transform: rotate(-70deg);
+}
+
+#lopp {
+    width: 90%;
+    border: 2px solid #999;
+    border-radius: 50%;
+}
+
+.ball {
+    position: absolute;
+    color: #fff;
+    font-size: 12px;
+    transform: rotate(70deg);
+}
+
+.ball>.text {
+    position: relative;
+    left: 20px;
+    color: #000;
+}
+
+.point {
+    position: absolute;
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: #f66;
+    border-radius: 50%;
+}
+
+.list {
+    position: absolute;
+    border: 1px solid #000;
+    color: #000;
+}
+
+.ball1 {
+    animation:
+        animX 10s cubic-bezier(0.4, 0, 0.6, 1) 0s infinite alternate,
+        animY 10s cubic-bezier(0.4, 0, 0.6, 1) -5s infinite alternate
+}
+
+.ball2 {
+    animation:
+        animX 10s cubic-bezier(0.4, 0, 0.6, 1) -4s infinite alternate,
+        animY 10s cubic-bezier(0.4, 0, 0.6, 1) -9s infinite alternate
+}
+
+.ball3 {
+    animation:
+        animX 10s cubic-bezier(0.4, 0, 0.6, 1) -8s infinite alternate,
+        animY 10s cubic-bezier(0.4, 0, 0.6, 1) -13s infinite alternate
+}
+
+.ball4 {
+    animation:
+        animX 10s cubic-bezier(0.4, 0, 0.6, 1) -12s infinite alternate,
+        animY 10s cubic-bezier(0.4, 0, 0.6, 1) -17s infinite alternate
+}
+
+.ball5 {
+    animation:
+        animX 10s cubic-bezier(0.4, 0, 0.6, 1) -16s infinite alternate,
+        animY 10s cubic-bezier(0.4, 0, 0.6, 1) -21s infinite alternate
+}
+
+.ball1:hover {
+    animation-play-state: paused;
+}
+
+.ball1:hover~.ball {
+    animation-play-state: paused;
+}
+
+.list:hover{
+    animation-play-state: paused;
+}
+
+.ball.pause {
+    animation-play-state: paused;
+}
+
+@keyframes animX {
+    0% {
+        left: 0px;
+    }
+
+    100% {
+        left: 80%;
+    }
+}
+
+@keyframes animY {
+    0% {
+        top: 0px;
+    }
+
+    100% {
+        top: 90%;
+    }
+}
+
+@keyframes scale {
+
+    0% {
+        transform: scale(0.7)
+    }
+
+    50% {
+        transform: scale(1)
+    }
+
+    100% {
+        transform: scale(0.7)
+    }
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+.wrap {
+    // width: 320px;
+    // height: 480px;
+    // box-shadow: 0 2px 15px #ccc;
+    // margin: 50px auto;
+    overflow: hidden;
+    // background-color: #fff;
+}
+
+.tabs {
+    width: 100%;
+    overflow-x: scroll;
+    display: -webkit-box;
+    display: flex;
+    -webkit-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    border-bottom: 1px solid #dedede;
+    position: relative;
+}
+
+// .tabs::-webkit-scrollbar {
+//     display: none;
+// }
+
+.tab-list {
+    -webkit-flex: 1 0 auto;
+    flex: 1 0 auto;
+    padding: 10px 10px;
+    text-align: center;
+}

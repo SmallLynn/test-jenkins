@@ -1,0 +1,13 @@
+/*#div1 {position:relative; width:450px; height:450px; margin: 20px auto 0; }*/
+.wordCloud {position:relative; margin: 0px auto 0; }
+.wordCloud a {position:absolute; top:0px; left:0px; font-family: Microsoft YaHei; color: #0b85ff; font-weight:bold; text-decoration:none; padding: 3px 6px; white-space: normal; word-break: keep-all;overflow: hidden; }
+
+.wordCloud .blue {color:blue;}
+.wordCloud .red {color:red;}
+.wordCloud .yellow {color:yellow;}
+
+
+p { font: 16px Microsoft YaHei; text-align: center; color: #ba0c0c; }
+p a { font-size: 14px; color: #ba0c0c; }
+p a:hover { color: red; }
+

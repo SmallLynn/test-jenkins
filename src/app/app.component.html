@@ -1,0 +1,51 @@
+<!-- <app-tag [data]="tag" [configs]="tagConfig" *ngFor="let tag of tags">{{tag.name}}</app-tag> -->
+<div class="box">
+
+    <div class="box1">
+
+    </div>
+    <div class="box2">
+        <div class="wrapper">
+            <i class="prev" nz-icon nzType="caret-left" nzTheme="outline"></i>
+            <div class="container" #con>
+                <!-- <div class="main"> -->
+                    <div class="main-inner" #tabs>
+                        <div *ngFor="let item of list">{{item}}</div>
+                    </div>
+                <!-- </div> -->
+            </div>
+            <i class="next" nz-icon nzType="caret-right" nzTheme="outline" (click)="next()"></i>
+        </div>
+    </div>
+    <div class="box3">
+        <div class="box3-container">
+            <div id="lopp" #lopp></div>
+            <div class="ball ball1" [ngClass]="{'pause': open}">
+                <span class="point" ></span>
+                <div class="text" (click)="popModal(0)">人</div>
+                <div *ngIf="activeIndex===0" class="list" (click)="closeModal()">
+                    <div>list1</div>
+                    <div>list2</div>
+                    <div>list3</div>
+                </div>
+            </div>
+            <div class="ball ball2" [ngClass]="{'pause': open}">
+                <span class="point"></span>
+                <div class="text">事</div>
+            </div>
+            <div class="ball ball3" [ngClass]="{'pause': open}">
+                <span class="point"></span>
+                <div class="text">地</div>
+            </div>
+            <div class="ball ball4" [ngClass]="{'pause': open}">
+                <span class="point"></span>
+                <div class="text">物</div>
+            </div>
+            <div class="ball ball5" [ngClass]="{'pause': open}">
+                <span class="point"></span>
+                <div class="text">组织</div>
+            </div>
+        </div>
+
+    </div>
+</div>
